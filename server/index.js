@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 app.post('/upload', upload.single('file'), (req, res) => {
-  const blobService = azureStorage.createBlobService("nearbynexusblob", "B4N3BiiEq6HNqMSPytSCErkiu/bKjaHebesnbdXcPqCW1IYxRPv4zAmL3r+AdAJqTZtTXBTiGM5p+ASt4J5nVA==");
+  const blobService = azureStorage.createBlobService("nearbynexusblob", "F4N3BiiEq6HNqMSPytSCErkiu/bKjaHebesnbdXcPqCW1IYxRPv4zAmL3r+AdAJqTZtTXBTiGM5p+ASt4J5nVA==");
   const blobName = Date.now() +"_"+ req.file.originalname;
   const stream = require('streamifier').createReadStream(req.file.buffer);
   const streamLength = req.file.buffer.length;
