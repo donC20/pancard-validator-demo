@@ -1,0 +1,113 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 300px;
+}
+
+.input-container {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.image-preview {
+  max-width: 50%;
+  padding: 2%;
+
+  max-height: fit-content;
+  text-align: center;
+}
+
+
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button {
+  margin-top: 15px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #337ab7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.heading-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main-heading {
+  font-size: 2rem;
+  color: #1e1616; /* Choose your desired text color */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+/* upload btn */
+.custum-file-upload {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cacaca;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload input {
+  display: none;
+}
