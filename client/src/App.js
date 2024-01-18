@@ -5,7 +5,7 @@ async function uploadImage(file) {
   const formData = new FormData();
   formData.append('file', file);
 
-  const response = await fetch('http://localhost:4000/upload', {
+  const response = await fetch('https://pancard-server.vercel.app/upload', {
     method: 'POST',
     body: formData,
   });
