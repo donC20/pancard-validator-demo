@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:4000,http://don100.pythonanywhere.com",
+  "proxy": "http://localhost:4000,http://don100.pythonanywhere.com,https://pancard-server.vercel.app",
   "name": "pan_detector",
   "version": "0.1.0",
   "private": true,
