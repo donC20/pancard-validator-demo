@@ -5,15 +5,21 @@ const upload = multer({ storage: multer.memoryStorage() });
 const cors = require('cors');
 const app = express();
 
+require('dotenv').config()
+
 app.use(cors());
 
+const azure_key = process.env.REACT_AZURE_KEY
+const azure_acc_name = process.env.REACT_AZURE_ACC_NAME
+const azure_container = process.env.REACT_AZURE_CONTAINER
+
 app.post('/upload', upload.single('file'), (req, res) => {
-  const blobService = azureStorage.createBlobService("nearbynexusblob", "F4N3BiiEq6HNqMSPytSCErkiu/bKjaHebesnbdXcPqCW1IYxRPv4zAmL3r+AdAJqTZtTXBTiGM5p+ASt4J5nVA==");
-  const blobName = Date.now() +"_"+ req.file.originalname;
+  const blobService = azureStorage.createBlobService(azure_acc_name, azure_key);
+  const blobName = Date.now() + "_" + req.file.originalname;
   const stream = require('streamifier').createReadStream(req.file.buffer);
   const streamLength = req.file.buffer.length;
 
-  blobService.createBlockBlobFromStream('nearbynexus-blobstore', blobName, stream, streamLength, err => {
+  blobService.createBlockBlobFromStream(azure_container, blobName, stream, streamLength, err => {
     if (err) {
       res.status(500).send({ error: err.message });
     } else {
